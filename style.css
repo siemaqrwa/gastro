@@ -67,6 +67,7 @@ a.zamow span.zamow_info::before{
 }
 
 a.zamow span::before{
+    border-color: DarkOliveGreen;
     background: DarkOliveGreen;
 }
 
