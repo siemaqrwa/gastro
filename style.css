@@ -6,6 +6,9 @@
     font-family: 'Shadows Into Light Two', cursive;
     -webkit-font-smoothing: antialiased;
     text-transform: uppercase;
+}
+
+*:focus{
     outline: 0;
 }
 
