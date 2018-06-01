@@ -8,10 +8,6 @@
     text-transform: uppercase;
 }
 
-section:focus{    
-    outline: none;
-}
-
 
 html,
 body {
@@ -64,6 +60,14 @@ a span::before {
 
 a.to-menu span::before {
     background: #f1f1f1;
+}
+
+a.zamow span.zamow_info::before{
+    background: #f1f1f1;
+}
+
+a.zamow span::before{
+    background: DarkOliveGreen;
 }
 
 a:hover span::before {
@@ -415,8 +419,4 @@ img {
     filter: saturate(40%);
     transform: rotate(-2deg);
     border-radius: 5% 92% 4% 95%/95% 6% 95% 4%;
-}
-
-.zamow_info::before{
-    background: transparent;
 }
