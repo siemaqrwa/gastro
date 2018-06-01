@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css?family=Just+Another+Hand|Just+Me+Again+Down+Here|Shadows+Into+Light+Two|Waiting+for+the+Sunrise');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Shadows Into Light Two', cursive;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase;
+}
+
+
+html,
+body {
+    height: 100%;
+    user-select: none;
+}
+
+body {
+    
+    overflow-x: hidden;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: .1s ease-in-out;
+    z-index: 9999;
+    border-width: 3px 4px 3px 5px;
+    border-radius: 30px 600px 60px 95%/600px 30px 500px 50px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+a span {
+    position: relative;
+}
+
+a span::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    border-width: 3px 4px 3px 5px;
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+    transform: scaleX(0);
+    transition: transform .2s ease-in-out;
+    border-color: #333;
+}
+
+a.to-menu span::before {
+    background: #f1f1f1;
+}
+
+a:hover span::before {
+    transform: scaleX(1);
+}
+
+nav a {
+    display: block;
+    float: left;
+    padding: 32px;
+    color: #ddd;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    transition: .1s ease-in-out;
+}
+
+nav a:hover {
+    background: #f1f1f1;
+    color: black;
+}
+
+nav.top-menu-scrolled {
+    background: rgba(0, 0, 0, 1);
+    opacity: .8;
+}
+
+nav.top-menu-scrolled:hover {
+    opacity: 1;
+}
+
+nav.top-menu-scrolled a {
+    padding: 16px;
+}
+
+
+#home {
+    position: relative;
+    height: 65vh;
+    background-image: url('img/pizza.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 90% 4% 92% 0%/10% 100% 10% 0%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+#home .inner {
+    position: absolute;
+    margin: auto auto;
+    color: #f1f1f1;
+    text-align: center;
+    font-size: 7em;
+}
+
+#home .inner a {
+    padding: 32px;
+    color: #ddd;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    transition: .1s ease-in-out;
+}
+
+#home .inner div .to-menu {
+    font-size: .3em;
+    padding: 16px;
+    background: #222;
+    border-width: 3px 4px 3px 5px;
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+    border-color: #222;
+}
+
+#home .hours {
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    padding: 16px;
+    background: #222;
+    border-width: 3px 4px 3px 5px;
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+    border-color: #222;
+    color: #f1f1f1;
+    text-transform: uppercase;
+}
+
+.comic-shadow {
+    text-shadow: 4px 4px 0px #222;
+}
+
+section {
+    padding: 128px 64px;
+}
+
+#menu {
+    padding-top: calc(10vh + 64px);
+    margin-top: -10vh;
+    background: #222;
+}
+
+h1 {
+    padding: 64px;
+    text-align: center;
+    font-size: 3em;
+    color: #f1f1f1;
+}
+
+.menu {
+  background-image:
+    linear-gradient(
+      to bottom, 
+      #f1f1f1,
+      #f1f1f1 50%,
+      #ddd 85%
+    );
+    border-style: solid;
+    border-color: transparent;
+    border-width: 3px 3px 5px 5px;
+    border-radius: 30px 600px 60px 95%/600px 30px 500px 50px;
+    transform: rotate(0deg);
+    overflow: hidden;
+    max-width: 1280px;
+    margin: auto;
+}
+
+.menu-inside {
+    transform: rotate(-0deg);
+}
+
+.tab {
+    overflow: hidden;
+}
+
+.tab button {
+    background-color: #222;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 32px 0px;
+    transition: 0.3s;
+    font-size: 2em;
+    width: 33.33%;
+    text-transform: uppercase;
+    color: #f1f1f1;
+}
+
+.tab button span {
+    position: relative;
+}
+
+.tab button span::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #f1f1f1;
+    border-width: 3px 4px 3px 5px;
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+    transform: scaleX(0);
+    transition: transform .2s ease-in-out;
+    border-color: #f1f1f1;
+
+}
+
+.tab button:hover span::before,
+.tab button.active span::before {
+    transform: scaleX(1);
+
+}
+
+.tab button.active {
+    background-color: darkgreen;
+}
+
+.tabcontent {
+    display: none;
+    padding-bottom: 32px;
+    border-top: none;
+    position: relative;
+}
+
+.tabrow {
+    padding: 16px 64px;
+    position: relative;
+    background: #f1f1f1;
+    clear: both;
+}
+
+.tabrow::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 32px;
+    width: calc(100% - 64px);
+    height: 2px;
+    background: #222;
+    border-width: 3px 4px 3px 5px;
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+}
+
+.tabrow:last-of-type::before {
+    height: 0;
+}
+
+.tabrow:nth-child(even) {
+    background-color: #ddd;
+}
+
+.tabrow h3 {
+    letter-spacing: 4px;
+    font-size: 2em;
+}
+
+
+.right {
+    margin-top: 8px;
+    float: right;
+}
+
+.food {
+    max-width: 80%;
+}
+
+.mega {
+    margin-left: 4px;
+    padding: 8px;
+    background: #cc3300;
+    border-width: 3px 4px 3px 5px;
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+    font-size: calc(2em - 16px);
+}
+
+.big {
+    margin-left: 4px;
+    padding: 8px;
+    background: #ff9900;
+    border-width: 3px 4px 3px 5px;
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+    font-size: calc(2em - 16px);
+}
+
+.mid {
+    margin-left: 4px;
+    padding: 8px;
+    background: #ffff00;
+    border-width: 3px 4px 3px 5px;
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+    font-size: calc(2em - 16px);
+}
+
+.small {
+    margin-left: 4px;
+    padding: 8px;
+    background: #99ff33;
+    border-width: 3px 4px 3px 5px;
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+    font-size: calc(2em - 16px);
+}
+
+#zamow {
+    padding: 0;
+    background-image: 
+        linear-gradient(to bottom, #222 0%,#222 50%, DarkOliveGreen  51%);
+}
+
+#zamow .content {
+    width: 100%;
+    padding: 128px 64px;
+    background-image: url("img/pizza2.jpg");
+    background-color: rgba(0,0,0,.5);
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 6%;
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center;
+    transform: translateX(-64px);
+    z-index: -1;
+}
+
+.zamow_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 32px;
+}
+
+.zamow_card i {
+    background: DarkOliveGreen;
+    color: #f1f1f1;
+    margin: 0;
+    font-size: 2em;
+    float: left;
+    padding: 23px;
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.zamow_info {
+    background: #f1f1f1;
+    color: DarkOliveGreen;
+    margin: 0;
+    font-size: 2em;
+    float: left;
+    padding: 16px;
+    transform-origin: left;
+    transition: .3s ease-in-out;
+    overflow: hidden;
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.zamow_info a {
+    color: DarkOliveGreen;
+}
+
+.zamow_info a span::before {
+    background: DarkOliveGreen;
+}
+
+#about {
+    background: DarkOliveGreen;
+}
+
+#about .content {
+    max-width: 1280px;
+    padding: 16px;
+    margin: auto;
+    color: #f1f1f1;
+    font-size: 1.5em;
+    text-align: justify;
+    text-align-last: left;
+}
+
+img {
+    display: block;
+    width: 90%;
+    background: #f1f1f1;
+    padding: 3px 4px 3px 5px;
+    margin: auto;
+    margin-top: 32px;
+    filter: saturate(40%);
+    transform: rotate(-2deg);
+    border-radius: 5% 92% 4% 95%/95% 6% 95% 4%;
+}
+
+.zamow_info::before{
+    background: transparent;
+}
