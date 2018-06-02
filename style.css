@@ -16,8 +16,8 @@ body {
 }
 
 body {
-    
-    overflow-x: hidden;
+    background: #222;
+    position: relative;
 }
 
 nav {
@@ -167,8 +167,6 @@ section {
 }
 
 #menu {
-    padding-top: calc(10vh + 64px);
-    margin-top: -10vh;
     background: #222;
     outline: 0;
 }
@@ -342,15 +340,13 @@ h1 {
 }
 
 #zamow .content {
-    width: 100%;
     padding: 128px 64px;
     background-image: url("img/pizza2.jpg");
     background-color: rgba(0,0,0,.5);
-    border-radius: 95% 4% 92% 5%/4% 95% 6% 6%;
+    border-radius: 1% 30% 92% 26%/4% 8% 6% 6%;
     background-blend-mode: darken;
     background-size: cover;
     background-position: center;
-    transform: translateX(-64px);
     z-index: -1;
 }
 
