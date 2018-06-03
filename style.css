@@ -6,6 +6,7 @@
     font-family: 'Shadows Into Light Two', cursive;
     -webkit-font-smoothing: antialiased;
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 
@@ -298,39 +299,103 @@ h1 {
 }
 
 .mega {
-    margin-left: 4px;
-    padding: 8px;
-    background: #cc3300;
-    border-width: 3px 4px 3px 5px;
-    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
-    font-size: calc(2em - 16px);
+    background: #c30;
 }
 
 .big {
-    margin-left: 4px;
-    padding: 8px;
-    background: #ff9900;
-    border-width: 3px 4px 3px 5px;
-    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
-    font-size: calc(2em - 16px);
+    background: #f90;
 }
 
 .mid {
-    margin-left: 4px;
-    padding: 8px;
-    background: #ffff00;
-    border-width: 3px 4px 3px 5px;
-    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
-    font-size: calc(2em - 16px);
+    background: #ff0;
 }
 
 .small {
+    background: #9f3;
+}
+
+.rozmiar {
     margin-left: 4px;
     padding: 8px;
-    background: #99ff33;
     border-width: 3px 4px 3px 5px;
     border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
     font-size: calc(2em - 16px);
+    position: relative;
+    display: inline-block;
+}
+
+
+.rozmiar .cena {
+    background-color: inherit;
+    text-align: center;
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+    border-width: 3px 4px 3px 5px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.rozmiar .cena::after {
+    content: "";
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.rozmiar.mega .cena::after {
+    border-color: #c30;
+}
+
+.rozmiar.big .cena::after {
+    border-color: #f90;
+}
+
+.rozmiar.mid .cena::after {
+    border-color: #ff0;
+}
+
+.rozmiar.small .cena::after {
+    border-color: #9f3;
+}
+
+.rozmiar:hover .cena {
+    opacity: 1;
+}
+
+.fa-envira,
+.fa-fire,
+.icofont-animal-fish {
+    font-size: 2em;
+    padding: 4px 8px;
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+    border-width: 3px 4px 3px 5px;
+    color: #222;
+    text-shadow: 1px 1px 0px #f1f1f1;
+}
+
+.fa-envira {
+    background: LawnGreen;
+}
+
+.fa-fire {
+    background: red;
+}
+
+.icofont-animal-fish {
+    background: LightSkyBlue;
+}
+
+.left {
+    float: left;
 }
 
 #zamow {
@@ -414,6 +479,6 @@ img {
     margin: auto;
     margin-top: 32px;
     filter: saturate(40%);
-    transform: rotate(-2deg);
+    transform: rotate(-1deg);
     border-radius: 5% 92% 4% 95%/95% 6% 95% 4%;
 }
