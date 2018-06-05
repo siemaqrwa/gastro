@@ -7,6 +7,8 @@
     -webkit-font-smoothing: antialiased;
     text-transform: uppercase;
     letter-spacing: 2px;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 
@@ -104,11 +106,51 @@ nav.top-menu-scrolled a {
     padding: 16px;
 }
 
+.hamburger {
+    
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    min-width: 30%;
+    background: #222;
+    z-index: 9999;
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    overflow-x: hidden;
+    transform: translateX(-100%);
+    transition: transform .2s ease-in-out;
+}
+
+aside.active {
+    transform: translateY(0px);
+}
+
+aside a {
+    display: block;
+    text-decoration: none;
+    padding: 32px;
+    color: #f1f1f1;
+    font-size: 2em;
+}
+
+aside a span::before {
+    background: #222;
+}
+
+aside a:hover {
+    background: #f1f1f1;
+    color: #222;
+}
 
 #home {
     position: relative;
     height: 65vh;
-    background-image: url('img/pizza.jpg');
+    background-image: url('../img/pizza.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -324,8 +366,11 @@ h1 {
     display: inline-block;
 }
 
-
-.rozmiar .cena {
+.znak {
+    position: relative;
+}
+.rozmiar .cena,
+.znak .info {
     background-color: inherit;
     text-align: center;
     border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
@@ -340,7 +385,13 @@ h1 {
     transition: opacity .2s;
 }
 
-.rozmiar .cena::after {
+.info {
+    font-size: .5em;
+    text-shadow: none;
+}
+
+.rozmiar .cena::after,
+.znak .info::after {
     content: "";
     position: absolute;
     top: 95%;
@@ -367,7 +418,16 @@ h1 {
     border-color: #9f3;
 }
 
-.rozmiar:hover .cena {
+.fa-envira .info::after {
+    border-color: LawnGreen;
+}
+
+.fa-fire .info::after {
+    border-color: red;
+}
+
+.rozmiar:hover .cena,
+.znak:hover .info {
     opacity: 1;
 }
 
@@ -406,7 +466,7 @@ h1 {
 
 #zamow .content {
     padding: 128px 64px;
-    background-image: url("img/pizza2.jpg");
+    background-image: url('../img/pizza2.jpg');
     background-color: rgba(0,0,0,.5);
     border-radius: 1% 30% 92% 26%/4% 8% 6% 6%;
     background-blend-mode: darken;
@@ -481,4 +541,33 @@ img {
     filter: saturate(40%);
     transform: rotate(-1deg);
     border-radius: 5% 92% 4% 95%/95% 6% 95% 4%;
+}
+
+
+@media (min-width:993px) {
+    
+    .hide-big {
+        display: none;
+    }
+    
+}
+
+@media (max-width:993px) {
+    
+    .hide-small {
+        display: none;
+    }
+    
+    nav a {
+        font-size: 2em;
+    }
+    
+    #zamow h1 {
+        font-size: 5em;
+    }
+    
+    .zamow_card {
+        font-size: 1.5em; 
+    }
+
 }

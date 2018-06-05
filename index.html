@@ -5,14 +5,14 @@
 
     <meta charset="utf-8">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="icofont/css/icofont.css">
     <link rel="icon" href="img/icon.png">
 
     <title>Nazwa restauracji</title>
 
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 
 </head>
 
@@ -22,16 +22,30 @@
         <a href="#home">
             <span>Home</span>
         </a>
+        <a href="#menu" class="hide-small">
+            <span>Menu</span>
+        </a>
+        <a href="#about" class="hide-small">
+            <span>O nas</span>
+        </a>
+        <span style="float: right;">
+            <a onclick="asideOpen()">
+                <i class="fas fa-bars" id="hamburger"></i>
+            </a>
+        </span>
+    </nav>
+    
+    <aside id="aside">
+        <a href="#home">
+            <span>Home</span>
+        </a>
         <a href="#menu">
             <span>Menu</span>
         </a>
         <a href="#about">
             <span>O nas</span>
         </a>
-        <a href="#">
-            <span>Home</span>
-        </a>
-    </nav>
+    </aside>
 
     <section id="home">
         <div class="inner">
@@ -70,57 +84,59 @@
                 <div id="Pizza" class="tabcontent" style="display: block;">
                     <div class="tabrow">
                         <span class="right">
-                            <span class="mega rozmiar">50cm
-                                <span class="cena">22,00zł</span>
+                            <span class="mega rozmiar">22,00zł
+                                <span class="cena">50cm</span>
                         </span>
-                        <span class="big rozmiar">40cm
-                                <span class="cena">16,50zł</span>
+                        <span class="big rozmiar">16,50zł
+                                <span class="cena">40cm</span>
                         </span>
-                        <span class="mid rozmiar">30cm
-                                <span class="cena">10,00zł</span>
+                        <span class="mid rozmiar">10,00zł
+                                <span class="cena">30cm</span>
                         </span>
-                        <span class="small rozmiar">24cm
-                                <span class="cena">8,50zł</span>
+                        <span class="small rozmiar">8,50zł
+                                <span class="cena">24cm</span>
                         </span>
                         </span>
                         <div>
-                            <span style=" font-size: 2em; font-weight: 700;">Margharita</span> <i class="fab fa-envira"></i>
+                            <span style=" font-size: 2em; font-weight: 700;">Margharita</span> 
+                            <i class="fab fa-envira znak"><span class="info">Wegetariańska</span></i>
                         </div>
                         <p>Z sosem do pizzy i serem.</p>
                     </div>
                     <div class="tabrow">
                         <span class="right">
-                            <span class="mega rozmiar">50cm
-                                <span class="cena">24,00zł</span>
+                            <span class="mega rozmiar">24,00zł
+                                <span class="cena">50cm</span>
                         </span>
-                        <span class="big rozmiar">40cm
-                                <span class="cena">17,00zł</span>
+                        <span class="big rozmiar">24,00zł
+                                <span class="cena">40cm</span>
                         </span>
-                        <span class="mid rozmiar">30cm
-                                <span class="cena">11,00zł</span>
+                        <span class="mid rozmiar">11,00zł
+                                <span class="cena">30cm</span>
                         </span>
-                        <span class="small rozmiar">24cm
-                                <span class="cena">9,00zł</span>
+                        <span class="small rozmiar">9,00zł
+                                <span class="cena">24cm</span>
                         </span>
                         </span>
                         <div>
-                            <span style=" font-size: 2em; font-weight: 700;">Napoli</span> <i class="fab fa-envira"></i>
+                            <span style=" font-size: 2em; font-weight: 700;">Napoli</span> 
+                            <i class="fab fa-envira znak"><span class="info">Wegetariańska</span></i>
                         </div>
                         <p>Z sosem do pizzy, pieczarkami i serem.</p>
                     </div>
                     <div class="tabrow">
                         <span class="right">
-                            <span class="mega rozmiar">50cm
-                                <span class="cena">26,00zł</span>
+                            <span class="mega rozmiar">26,00zł
+                                <span class="cena">50cm</span>
                         </span>
-                        <span class="big rozmiar">40cm
-                                <span class="cena">19,50zł</span>
+                        <span class="big rozmiar">19,50zł
+                                <span class="cena">40cm</span>
                         </span>
-                        <span class="mid rozmiar">30cm
-                                <span class="cena">12,50zł</span>
+                        <span class="mid rozmiar">12,50zł
+                                <span class="cena">30cm</span>
                         </span>
-                        <span class="small rozmiar">24cm
-                                <span class="cena">10,00zł</span>
+                        <span class="small rozmiar">10,00zł
+                                <span class="cena">24cm</span>
                         </span>
                         </span>
                         <h3>Salami</h3>
@@ -128,17 +144,17 @@
                     </div>
                     <div class="tabrow">
                         <span class="right">
-                            <span class="mega rozmiar">50cm
-                                <span class="cena">26,00zł</span>
+                            <span class="mega rozmiar">26,00zł
+                                <span class="cena">50cm</span>
                         </span>
-                        <span class="big rozmiar">40cm
-                                <span class="cena">19,50zł</span>
+                        <span class="big rozmiar">19,50zł
+                                <span class="cena">40cm</span>
                         </span>
-                        <span class="mid rozmiar">30cm
-                                <span class="cena">12,50zł</span>
+                        <span class="mid rozmiar">12,50zł
+                                <span class="cena">30cm</span>
                         </span>
-                        <span class="small rozmiar">24cm
-                                <span class="cena">10,00zł</span>
+                        <span class="small rozmiar">10,00zł
+                                <span class="cena">24cm</span>
                         </span>
                         </span>
                         <h3>Kasa</h3>
@@ -167,14 +183,15 @@
                             <span class="mega rozmiar">50cm</span> <span class="big rozmiar">40cm</span> <span class="mid rozmiar">30cm</span> <span class="small rozmiar">24cm</span>
                         </span>
                         <h3>4 Pory Roku</h3>
-                        <p>Z sosem pizzy, papryką, pomid rozmiarorem, szynką i serem.</p>
+                        <p>Z sosem pizzy, papryką, pomidorem, szynką i serem.</p>
                     </div>
                     <div class="tabrow">
                         <span class="right">
                             <span class="mega rozmiar">50cm</span> <span class="big rozmiar">40cm</span> <span class="mid rozmiar">30cm</span> <span class="small rozmiar">24cm</span>
                         </span>
                         <div>
-                            <span style=" font-size: 2em; font-weight: 700;">Bomba</span> <i class="fas fa-fire"></i>
+                            <span style=" font-size: 2em; font-weight: 700;">Bomba</span> 
+                            <i class="fas fa-fire znak"><span class="info">Ostra</span></i>
                         </div>
                         <p>Z sosem pizzy, szynką, papryką, jalapeno i serem.</p>
                     </div>
@@ -190,7 +207,8 @@
                             <span class="mega rozmiar">50cm</span> <span class="big rozmiar">40cm</span> <span class="mid rozmiar">30cm</span> <span class="small rozmiar">24cm</span>
                         </span>
                         <div>
-                            <span style=" font-size: 2em; font-weight: 700;">Vegetaria</span> <i class="fab fa-envira"></i>
+                            <span style=" font-size: 2em; font-weight: 700;">Vegetaria</span> 
+                            <i class="fab fa-envira znak"><span class="info">Wegetariańska</span></i>
                         </div>
                         <p>Z sosem do pizzy, pieczarkami, kukurydzą. papryką, pomidorem, cebulą i serem.</p>
                     </div>
@@ -234,7 +252,8 @@
                             <span class="mega rozmiar">50cm</span> <span class="big rozmiar">40cm</span> <span class="mid rozmiar">30cm</span> <span class="small rozmiar">24cm</span>
                         </span>
                         <div>
-                            <span style=" font-size: 2em; font-weight: 700;">Mexykańska</span> <i class="fas fa-fire"></i>
+                            <span style=" font-size: 2em; font-weight: 700;">Mexykańska</span>
+                            <i class="fas fa-fire znak"><span class="info">Ostra</span></i>
                         </div>
                         <p>Z sosem bolognese, papryką, fasolą, kukurydzą, papryczką jalapeno i serem.</p>
                     </div>
@@ -243,7 +262,7 @@
                             <span class="mega rozmiar">50cm</span> <span class="big rozmiar">40cm</span> <span class="mid rozmiar">30cm</span> <span class="small rozmiar">24cm</span>
                         </span>
                         <div>
-                            <span style=" font-size: 2em; font-weight: 700;">Peperoni</span> <i class="fas fa-fire"></i>
+                            <span style=" font-size: 2em; font-weight: 700;">Peperoni</span> <i class="fas fa-fire znak"><span class="info">Ostra</span></i>
                         </div>
                         <p>Z sosem do pizzy, pieczarkami, szynką, peperoni i serem.</p>
                     </div>
@@ -314,7 +333,7 @@
                             <span class="mega rozmiar">50cm</span> <span class="big rozmiar">40cm</span> <span class="mid rozmiar">30cm</span> <span class="small rozmiar">24cm</span>
                         </span>
                         <div>
-                            <span style="font-size: 2em; font-weight: 700;">Serowa</span> <i class="fab fa-envira"></i>
+                            <span style="font-size: 2em; font-weight: 700;">Serowa</span> <i class="fab fa-envira znak"><span class="info">Wegetariańska</span></i>
                         </div>
                         <p>Z sosem do pizzy, mozzarellą, goudą i gorgonzolą.</p>
                     </div>
@@ -332,9 +351,9 @@
                             <span class="mega rozmiar">50cm</span> <span class="big rozmiar">40cm</span> <span class="mid rozmiar">30cm</span> <span class="small rozmiar">24cm</span>
                         </span>
                         <div>
-                            <span style=" font-size: 2em; font-weight: 700;">Szefa</span> <i class="fas fa-fire"></i>
+                            <span style=" font-size: 2em; font-weight: 700;">Szefa</span> <i class="fas fa-fire znak"><span class="info">Ostra</span></i>
                         </div>
-                        <p>Z sosem, pieczarkami, szynką, pomid rozmiarorem, cebulą i jalapeno.</p>
+                        <p>Z sosem, pieczarkami, szynką, pomidorem, cebulą i jalapeno.</p>
                     </div>
                     <div class="tabrow">
                         <span class="right">
@@ -456,7 +475,7 @@
                             <span class="mid rozmiar">100dag</span>
                         </span>
                         <h3>Pierś szefowej</h3>
-                        <p>Serwowana z sosem jogurtowym, ogórkiem i pomid rozmiarorem, zapiekana z serem mozzarellą.</p>
+                        <p>Serwowana z sosem jogurtowym, ogórkiem i pomidorem, zapiekana z serem mozzarellą.</p>
                     </div>
                     <div class="tabrow">
                         <span class="right">
@@ -491,21 +510,21 @@
                             <span class="mega rozmiar">XXL</span> <span class="big rozmiar">Duży</span>
                         </span>
                         <h3>Kebab tradycyjny</h3>
-                        <p>Z sosem, mięsem gyros, surówką, pomid rozmiarorem i ogórkiem.</p>
+                        <p>Z sosem, mięsem gyros, surówką, pomidorem i ogórkiem.</p>
                     </div>
                     <div class="tabrow">
                         <span class="right">
                             <span class="mega rozmiar">XXL</span> <span class="big rozmiar">Duży</span>
                         </span>
                         <h3>Kebab studencki</h3>
-                        <p>Z sosem, mięsem gyros, cebulą czerwoną, kapustą pekińską, pomid rozmiarorem, ogórkiem i frytkami.</p>
+                        <p>Z sosem, mięsem gyros, cebulą czerwoną, kapustą pekińską, pomidorem, ogórkiem i frytkami.</p>
                     </div>
                     <div class="tabrow">
                         <span class="right">
                             <span class="mega rozmiar">XXL</span> <span class="big rozmiar">Duży</span>
                         </span>
                         <h3>Kebab grecki</h3>
-                        <p>Z sosem, serem feta, oliwkami, mięsem gyros, surówkami, pomid rozmiarorem i ogórkiem.</p>
+                        <p>Z sosem, serem feta, oliwkami, mięsem gyros, surówkami, pomidorem i ogórkiem.</p>
                     </div>
                     <div class="tabrow">
                         <span class="right">
@@ -526,14 +545,14 @@
                             <span class="mega rozmiar">60cm</span> <span class="mid rozmiar">30cm</span>
                         </span>
                         <h3>Bagietka szynkowa</h3>
-                        <p>Z sosem,serem, szynką, pomid rozmiarorem i kapustą pekińską.</p>
+                        <p>Z sosem,serem, szynką, pomidorem i kapustą pekińską.</p>
                     </div>
                     <div class="tabrow">
                         <span class="right">
                             <span class="mega rozmiar">60cm</span> <span class="mid rozmiar">30cm</span>
                         </span>
                         <h3>Bagietka tuńczyk</h3>
-                        <p>Z sosem, kapustą pekińską, serem, tuńczykiem, pomid rozmiarorem i cebulą czerwoną.</p>
+                        <p>Z sosem, kapustą pekińską, serem, tuńczykiem, pomidorem i cebulą czerwoną.</p>
                     </div>
                     <div class="tabrow">
                         <span class="right">
@@ -598,21 +617,21 @@
                             <span class="mid rozmiar">12 zł</span>
                         </span>
                         <h3>Sałatka Grilowany Kurczak</h3>
-                        <p>z sałatą lodową, kurczakiem z grilla, ogórkiem, pomid rozmiarorem, cebulą czerwoną, kukurydzą i sosem.</p>
+                        <p>z sałatą lodową, kurczakiem z grilla, ogórkiem, pomidorem, cebulą czerwoną, kukurydzą i sosem.</p>
                     </div>
                     <div class="tabrow">
                         <span class="right">
                             <span class="mid rozmiar">13 zł</span>
                         </span>
                         <h3>Sałatka Kurczak w Chrupiącej Panierce</h3>
-                        <p>Z sałatą lodową, kurczakiem w panierce, ogórkiem, pomid rozmiarorem, kukurydza i sosem.</p>
+                        <p>Z sałatą lodową, kurczakiem w panierce, ogórkiem, pomidorem, kukurydza i sosem.</p>
                     </div>
                     <div class="tabrow">
                         <span class="right">
                             <span class="mid rozmiar">15 zł</span>
                         </span>
                         <h3>Sałatka z Krewetkami</h3>
-                        <p>Z sałatą lodową, sosem czosnkowym, krewetkami,pomid rozmiarorem i cebulą czerwoną</p>
+                        <p>Z sałatą lodową, sosem czosnkowym, krewetkami, pomidorem i cebulą czerwoną</p>
                     </div>
                     <div class="tabrow">
                         <span class="right">
@@ -626,7 +645,7 @@
                             <span class="mid rozmiar">12 zł</span>
                         </span>
                         <h3>Sałatka Gyros</h3>
-                        <p>Z sałata lodową, mięsem gyros, cebulą czerwoną, ogórkiem, pomid rozmiarorem i sosem jogurtowym</p>
+                        <p>Z sałata lodową, mięsem gyros, cebulą czerwoną, ogórkiem, pomidorem i sosem jogurtowym</p>
                     </div>
                     <div class="tabrow">
                         <span class="right">
@@ -681,15 +700,19 @@
         <div class="content">
             <h1 class="comic-shadow">ZAMÓW</h1>
             <span class="zamow_card">
+                <a href="tel:+48883993176" class="zamow">
                     <i class="fas fa-phone"></i>
-                    <span class="zamow_info">55 272 73 73</span>
+                    <span class="zamow_info">
+                        <span>883 993 176</span>
+                    </span>
+                </a>
             </span>
             <span class="zamow_card">
                 <a href="https://www.pyszne.pl/pizzeria-euro" target="_blank" class="zamow">
                     <i class="fas fa-shopping-cart"></i>
                     <span class="zamow_info">
                         <span>www.pyszne.pl</span>
-            </span>
+                    </span>
             </a>
             </span>
         </div>

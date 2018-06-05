@@ -23,3 +23,12 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+function asideOpen() {
+    var aside = document.getElementById('aside');
+    var hamburger = document.getElementById('hamburger');
+    
+    aside.classList.toggle("active");
+    hamburger.classList.toggle("fa-bars");
+    hamburger.classList.toggle("fa-times");
+}
