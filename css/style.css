@@ -65,11 +65,11 @@ a.to-menu span::before {
     background: #f1f1f1;
 }
 
-a.zamow span.zamow_info::before{
+a.zamow span.zamow_info::before {
     background: #f1f1f1;
 }
 
-a.zamow span::before{
+a.zamow span::before {
     border-color: DarkOliveGreen;
     background: DarkOliveGreen;
 }
@@ -81,7 +81,7 @@ a:hover span::before {
 nav a {
     display: block;
     float: left;
-    padding: 32px;
+    padding: 32px 64px;
     color: #ddd;
     font-size: 1.25em;
     text-transform: uppercase;
@@ -103,12 +103,10 @@ nav.top-menu-scrolled:hover {
 }
 
 nav.top-menu-scrolled a {
-    padding: 16px;
+    padding: 16px 32px;
 }
 
-.hamburger {
-    
-}
+.hamburger {}
 
 aside {
     position: fixed;
@@ -118,7 +116,7 @@ aside {
     min-width: 30%;
     background: #222;
     z-index: 9999;
-    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+    border-radius: 95% 4% 0% 5%/4% 95% 6% 95%;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     overflow-x: hidden;
@@ -222,13 +220,10 @@ h1 {
 }
 
 .menu {
-  background-image:
-    linear-gradient(
-      to bottom, 
-      #f1f1f1,
-      #f1f1f1 50%,
-      #ddd 85%
-    );
+    background-image: linear-gradient( to bottom,
+    #f1f1f1,
+    #f1f1f1 50%,
+    #ddd 85%);
     border-style: solid;
     border-color: transparent;
     border-width: 3px 3px 5px 5px;
@@ -321,9 +316,6 @@ h1 {
     height: 0;
 }
 
-.tabrow:nth-child(even) {
-    background-color: #ddd;
-}
 
 .tabrow h3 {
     letter-spacing: 4px;
@@ -369,6 +361,7 @@ h1 {
 .znak {
     position: relative;
 }
+
 .rozmiar .cena,
 .znak .info {
     background-color: inherit;
@@ -383,6 +376,11 @@ h1 {
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity .2s;
+    font-weight: bold;
+}
+
+.znak .info {
+    text-shadow: 1px 1px 0px #f1f1f1;
 }
 
 .info {
@@ -426,6 +424,10 @@ h1 {
     border-color: red;
 }
 
+.icofont-animal-fish .info::after {
+    border-color: LightSkyBlue;
+}
+
 .rozmiar:hover .cena,
 .znak:hover .info {
     opacity: 1;
@@ -460,14 +462,13 @@ h1 {
 
 #zamow {
     padding: 0;
-    background-image: 
-        linear-gradient(to bottom, #222 0%,#222 50%, DarkOliveGreen  51%);
+    background-image: linear-gradient(to bottom, #222 0%, #222 50%, DarkOliveGreen 51%);
 }
 
 #zamow .content {
     padding: 128px 64px;
     background-image: url('../img/pizza2.jpg');
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, .5);
     border-radius: 1% 30% 92% 26%/4% 8% 6% 6%;
     background-blend-mode: darken;
     background-size: cover;
@@ -533,7 +534,7 @@ h1 {
 
 img {
     display: block;
-    width: 90%;
+    width: 95%;
     background: #f1f1f1;
     padding: 3px 4px 3px 5px;
     margin: auto;
@@ -541,33 +542,94 @@ img {
     filter: saturate(40%);
     transform: rotate(-1deg);
     border-radius: 5% 92% 4% 95%/95% 6% 95% 4%;
+    box-shadow: 4px 4px #222;
+}
+
+.food-info {
+    opacity: 0;
+    max-height: 0;
+    transition: 
+        max-height .3s ease-in-out,
+        opacity .3s ease-in-out;
+}
+
+.tabrow.shown + .food-info {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.fa-angle-down {
+    font-size: 3em;
+    transition: transform .3s ease-in-out;
+}
+
+.tabrow.shown .fa-angle-down {
+    transform: rotate(180deg);
+}
+
+.small-info {
+    padding: 16px 64px;
+    font-size: 32px;
+    position: relative;
+    text-align: left;
+}
+
+.small-right {
+    position: absolute;
+    right: 64px;
+    top: 16px;
 }
 
 
+
 @media (min-width:993px) {
-    
+
     .hide-big {
         display: none;
     }
     
+    .tabrow:nth-child(even) {
+        background-color: #ddd;
+    }
+
 }
 
 @media (max-width:993px) {
-    
+
+    .fa-envira,
+    .fa-fire,
+    .icofont-animal-fish {
+        font-size: calc(3em - 8px);
+    }
+
+    nav,
+    aside {
+        font-size: 1.5em;
+    }
+
     .hide-small {
         display: none;
     }
-    
+
     nav a {
         font-size: 2em;
     }
-    
+
     #zamow h1 {
         font-size: 5em;
     }
-    
+
     .zamow_card {
-        font-size: 1.5em; 
+        font-size: 1.5em;
+    }
+    
+    .tabrow {
+        background-color: #f1f1f1;
+    }
+
+    
+    .tabrow2 {
+        background-color: #ddd;
     }
 
 }

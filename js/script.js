@@ -21,6 +21,7 @@ function openCity(evt, cityName) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
     document.getElementById(cityName).style.display = "block";
+    document.getElementById(cityName + 1).style.display = "block";
     evt.currentTarget.className += " active";
 }
 
