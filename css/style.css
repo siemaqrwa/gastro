@@ -32,7 +32,7 @@ nav {
     transition: .1s ease-in-out;
     z-index: 9999;
     border-width: 3px 4px 3px 5px;
-    border-radius: 30px 600px 60px 95%/600px 30px 500px 50px;
+    border-radius: 30px 600px 0% 95%/600px 10% 500px 50px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     overflow: hidden;
@@ -548,9 +548,8 @@ img {
 .food-info {
     opacity: 0;
     max-height: 0;
-    transition: 
-        max-height .3s ease-in-out,
-        opacity .3s ease-in-out;
+    transition: max-height .3s ease-in-out,
+    opacity .3s ease-in-out;
 }
 
 .tabrow.shown + .food-info {
@@ -569,7 +568,7 @@ img {
 
 .small-info {
     padding: 16px 64px;
-    font-size: 32px;
+    font-size: 3em;
     position: relative;
     text-align: left;
 }
@@ -587,7 +586,7 @@ img {
     .hide-big {
         display: none;
     }
-    
+
     .tabrow:nth-child(even) {
         background-color: #ddd;
     }
@@ -599,7 +598,7 @@ img {
     .fa-envira,
     .fa-fire,
     .icofont-animal-fish {
-        font-size: calc(3em - 8px);
+        font-size: 3em;
     }
 
     nav,
@@ -622,14 +621,19 @@ img {
     .zamow_card {
         font-size: 1.5em;
     }
-    
+
     .tabrow {
         background-color: #f1f1f1;
     }
 
-    
+
     .tabrow2 {
         background-color: #ddd;
+    }
+    
+    .rozmiar:hover .cena,
+    .znak:hover .info {
+        opacity: 0;
     }
 
 }
